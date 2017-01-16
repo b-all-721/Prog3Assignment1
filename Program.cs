@@ -17,7 +17,8 @@ namespace Assignment1
             Application.Run(new Form1());
 
             //List<string> emailList = new List<string>();
-            //practice prac = new practice();
+
+            //here is a little comment
         }
     }
 }
