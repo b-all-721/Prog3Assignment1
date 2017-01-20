@@ -31,7 +31,8 @@ namespace Assignment1
 
         private void btnPublishNot_Click(object sender, EventArgs e)
         {
-            PublishNotification pubNotification = new PublishNotification();
+            
+            Publication pubNotification = new Publication();
             this.Hide();
             pubNotification.Show();
         }
@@ -39,6 +40,11 @@ namespace Assignment1
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

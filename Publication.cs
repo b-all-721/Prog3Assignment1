@@ -10,22 +10,27 @@ using System.Windows.Forms;
 
 namespace Assignment1
 {
-    public partial class PublishNotification : Form
+    public partial class Publication : Form
     {
-        public PublishNotification()
+        public Publication()
         {
             InitializeComponent();
         }
 
         private void btnPublish_Click(object sender, EventArgs e)
         {
-            string inputNotification = txtNotification.Text;
-            MessageBox.Show("Your notification: '" + inputNotification  + "' was sent");
+            Delegate del = new Delegate();
+            
+            string pubContent = txtPubContent.Text;
+            PublicationClass newPublication = new PublicationClass(pubContent);
+            MessageBox.Show(newPublication.sendPublication("Your publication: "));
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            Form1 form = new Form1();
+            form.Show();
         }
     }
 }

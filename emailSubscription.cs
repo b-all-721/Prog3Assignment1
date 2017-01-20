@@ -35,42 +35,17 @@ namespace Assignment1
             
         } 
 
-        public void Subscribe(Delegate pub,string email)
+        public void Subscribe(Delegate pub, string email)
         {
-
             Collections.emailList.Add(email);
             pub.publishmsg += sendEmail;
         }
-        public void Unsubscribe(Delegate pub)
+        public void Unsubscribe(Delegate pub, string email)
         {
+
+            Collections.emailList.Remove(email);
             pub.publishmsg -= sendEmail;
         }
-         public bool CheckIfExists(string email)
-        {
-            //bool output = false;
-            //foreach (var item in emailList)
-            //{
-            //    if (item.Equals(email))
-            //    {
-            //      return output = true;
-            //        // break;
-            //    }
-            //    else
-            //    {
-            //        return output = false;
-            //       // break;
-            //    }
-            //    return output;
-            //}
-            //return output;
-            if (Collections.emailList.Contains(email))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+         
     }
 }

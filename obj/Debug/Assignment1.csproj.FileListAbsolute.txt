@@ -18,4 +18,4 @@ E:\my work\Semester4\programming3\Assignment1\obj\Debug\Assignment1.Form1.resour
 E:\my work\Semester4\programming3\Assignment1\obj\Debug\Assignment1.Properties.Resources.resources
 E:\my work\Semester4\programming3\Assignment1\obj\Debug\Assignment1.subscriptionForm.resources
 E:\my work\Semester4\programming3\Assignment1\obj\Debug\Assignment1.csproj.GenerateResource.Cache
-E:\my work\Semester4\programming3\Assignment1\obj\Debug\Assignment1.PublishNotification.resources
+E:\my work\Semester4\programming3\Assignment1\obj\Debug\Assignment1.Publication.resources

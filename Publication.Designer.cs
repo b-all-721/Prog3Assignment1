@@ -1,6 +1,6 @@
 ﻿namespace Assignment1
 {
-    partial class PublishNotification
+    partial class Publication
     {
         /// <summary>
         /// Required designer variable.
@@ -28,59 +28,62 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNotification = new System.Windows.Forms.Label();
-            this.txtNotification = new System.Windows.Forms.TextBox();
+            this.lblPubContent = new System.Windows.Forms.Label();
+            this.txtPubContent = new System.Windows.Forms.TextBox();
             this.btnPublish = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // lblNotification
+            // lblPubContent
             // 
-            this.lblNotification.AutoSize = true;
-            this.lblNotification.Location = new System.Drawing.Point(51, 32);
-            this.lblNotification.Name = "lblNotification";
-            this.lblNotification.Size = new System.Drawing.Size(100, 13);
-            this.lblNotification.TabIndex = 0;
-            this.lblNotification.Text = "Notification Content";
+            this.lblPubContent.AutoSize = true;
+            this.lblPubContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPubContent.Location = new System.Drawing.Point(58, 72);
+            this.lblPubContent.Name = "lblPubContent";
+            this.lblPubContent.Size = new System.Drawing.Size(151, 20);
+            this.lblPubContent.TabIndex = 0;
+            this.lblPubContent.Text = "Publication Content:";
             // 
-            // txtNotification
+            // txtPubContent
             // 
-            this.txtNotification.Location = new System.Drawing.Point(181, 29);
-            this.txtNotification.Name = "txtNotification";
-            this.txtNotification.Size = new System.Drawing.Size(203, 20);
-            this.txtNotification.TabIndex = 1;
+            this.txtPubContent.Location = new System.Drawing.Point(216, 71);
+            this.txtPubContent.Name = "txtPubContent";
+            this.txtPubContent.Size = new System.Drawing.Size(241, 20);
+            this.txtPubContent.TabIndex = 1;
             // 
             // btnPublish
             // 
-            this.btnPublish.Location = new System.Drawing.Point(87, 73);
+            this.btnPublish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPublish.Location = new System.Drawing.Point(134, 134);
             this.btnPublish.Name = "btnPublish";
-            this.btnPublish.Size = new System.Drawing.Size(82, 31);
+            this.btnPublish.Size = new System.Drawing.Size(75, 35);
             this.btnPublish.TabIndex = 2;
-            this.btnPublish.Text = "Publish";
+            this.btnPublish.Text = "Publist";
             this.btnPublish.UseVisualStyleBackColor = true;
             this.btnPublish.Click += new System.EventHandler(this.btnPublish_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(371, 73);
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(373, 133);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(83, 31);
+            this.btnExit.Size = new System.Drawing.Size(84, 36);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // PublishNotification
+            // Publication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 122);
+            this.ClientSize = new System.Drawing.Size(558, 217);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnPublish);
-            this.Controls.Add(this.txtNotification);
-            this.Controls.Add(this.lblNotification);
-            this.Name = "PublishNotification";
-            this.Text = "PublishNotification";
+            this.Controls.Add(this.txtPubContent);
+            this.Controls.Add(this.lblPubContent);
+            this.Name = "Publication";
+            this.Text = "Publication";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,8 +91,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblNotification;
-        private System.Windows.Forms.TextBox txtNotification;
+        private System.Windows.Forms.Label lblPubContent;
+        private System.Windows.Forms.TextBox txtPubContent;
         private System.Windows.Forms.Button btnPublish;
         private System.Windows.Forms.Button btnExit;
     }

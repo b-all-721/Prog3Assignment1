@@ -9,6 +9,7 @@ namespace Assignment1
     class Collections
     {
         public static List<string> emailList = new List<string>();
+        
 
         public static List<string> phoneList = new List<string>();
 

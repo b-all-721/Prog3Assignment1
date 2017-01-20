@@ -11,13 +11,11 @@ using System.Windows.Forms;
 
 namespace Assignment1
 {
-    public partial class subscriptionForm : Form
+    public partial class subscriptionForm : Form 
     {
         public subscriptionForm()
         {
             InitializeComponent();
-
-            
         }
 
         private void btnSubscribe_Click(object sender, EventArgs e)
@@ -38,21 +36,17 @@ namespace Assignment1
                 {
                     if (Regex.Replace(inputEmail, expresion, string.Empty).Length == 0)
                     {
-
                         // If exists already..
-                        //if (emailSubscription1.CheckIfExists(inputEmail)==true)
                         if (Collections.emailList.Contains(inputEmail))
                         {
-                            MessageBox.Show("Sorry this email exists!");
+                            MessageBox.Show(del1.PublishMessage("Sorry this email exists!"));
                         }
                         else
                         {
                             emailSubscription emailSubscription1 = new emailSubscription(inputEmail);
                             emailSubscription1.Subscribe(del1, inputEmail);
-                            MessageBox.Show("Congats! Your email has been added.");
+                            MessageBox.Show(del1.PublishMessage("Congrats! Your email has been added!"));
                         }
-                        //del1.PublishMessage("New Notifications!");
-                        // Console.ReadLine();
                     }
                     else
                     {
@@ -71,17 +65,16 @@ namespace Assignment1
                 expresion = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
                 if (Regex.IsMatch(inputPhone,expresion ))
                 {
-                    if (Collections.phoneList.Contains(inputEmail))
+                    if (Collections.phoneList.Contains(inputPhone))
                     {
-                        MessageBox.Show("Sorry this email exists!");
+                        MessageBox.Show("Sorry this phone number exists!");
                     }
                     else
-                    {PhoneSubscription phoneSub1 = new PhoneSubscription(inputPhone);
+                    {
+                        PhoneSubscription phoneSub1 = new PhoneSubscription(inputPhone);
                         phoneSub1.Subscribe(del1, inputPhone);
-                        MessageBox.Show("Congats! Your email has been added.");
+                        MessageBox.Show(del1.PublishMessage("Congrats!your phone number has been added!"));
                     }
-                    //del1.PublishMessage("New Notifications!");
-                    //Console.ReadLine();
                 }
                 else
                 {
@@ -109,20 +102,16 @@ namespace Assignment1
                 {
                     if (Regex.Replace(inputEmail, expresion, string.Empty).Length == 0)
                     {
-                        emailSubscription emailSubscription1 = new emailSubscription(inputEmail);
-                        if(emailSubscription1.CheckIfExists(inputEmail))
+                        if (Collections.emailList.Contains(inputEmail))
                         {
-
-                            emailSubscription1.Unsubscribe(del1);
-                            MessageBox.Show("Your email exists, it was deleted");
+                            emailSubscription emailSub1 = new emailSubscription(inputEmail);
+                            emailSub1.Unsubscribe(del1,inputEmail);
+                            MessageBox.Show("Congrats!your phone number has been added!");
                         }
                         else
                         {
                             MessageBox.Show("Sorry, your email does not exist");
                         }
-                      
-                        //del1.PublishMessage("New Notifications!");
-                        //Console.ReadLine();
 
                     }
                     else
@@ -141,10 +130,11 @@ namespace Assignment1
                 expresion = @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}";
                 if (Regex.IsMatch(inputPhone, expresion))
                 {
-                    PhoneSubscription phoneSub1 = new PhoneSubscription(inputPhone);
-                    if (phoneSub1.CheckIfExists(inputPhone))
+                    
+                    if (Collections.phoneList.Contains(inputPhone))
                     {
-                        phoneSub1.Unsubscribe(del1);
+                        PhoneSubscription phoneSub1 = new PhoneSubscription(inputPhone);
+                        phoneSub1.Unsubscribe(del1, inputPhone);
                         MessageBox.Show("Your phone exists, it was deleted");
                     }
                     else
@@ -152,15 +142,20 @@ namespace Assignment1
                         MessageBox.Show("Sorry, your phone does not exist");
                     }
                 }
-                    //del1.PublishMessage("New Notifications!");
-                    //Console.ReadLine();
                 }
                 else
                 {
                     MessageBox.Show("Please enter a valid Phone number");
                 }
             }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form = new Form1();
+            form.Show();
         }
+    }
     }
 
 

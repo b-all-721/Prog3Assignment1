@@ -40,36 +40,11 @@ namespace Assignment1
             Collections.phoneList.Add(phoneNumber);
             pub.publishmsg += sendMessage;
         }
-        public void Unsubscribe(Delegate pub)
+        public void Unsubscribe(Delegate pub, string phoneNumber)
         {
+            Collections.phoneList.Remove(phoneNumber);
             pub.publishmsg -= sendMessage;
         }
-        public bool CheckIfExists(string phone)
-        {
-            //bool output = true;
-            ////foreach (string item in pohneNumList)
-            ////{
-            //    if (item.Equals(phone))
-            //    {
-            //        return output = true;
-
-            //    }
-            //    else
-            //    {
-            //        return output = false;
-
-            //    }
-
-            //}
-            if (Collections.phoneList.Contains(phone))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-
-        }
+      
     }
 }
